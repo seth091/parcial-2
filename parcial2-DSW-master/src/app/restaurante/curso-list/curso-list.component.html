@@ -1,0 +1,52 @@
+<div *ngIf="selected">
+  <app-Curso-detail [CursoDetail]="selectedCurso"></app-Curso-detail>
+</div>
+<hr />
+
+<h2>Cursos En Línea</h2>
+<table class="table">
+  <thead>
+    <link rel = "stylesheet" href = "curso-list.component.css">
+    <tr>
+      <th>#</th>
+      <th>Titulo</th>
+      <th>Plataforma</th>
+      <th>Lanzamiento</th>
+      <th>Horas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Curso of Cursos; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td (click)="onSelected(Curso)">{{ Curso.title }}   </td>
+      <td (click)="onSelected(Curso)">{{ Curso.platform }}   </td>
+      <td (click)="onSelected(Curso)">{{ Curso.launch_year }}   </td>
+      <td (click)="onSelected(Curso)">{{ Curso.duration_hours }}   </td>
+    </tr>
+    <tbody>
+      <tr *ngFor="let Curso of Cursos; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td (click)="onSelected(Curso)">{{ Curso.title }}   </td>
+        <td (click)="onSelected(Curso)">{{ Curso.platform }}   </td>
+        <td (click)="onSelected(Curso)">{{ Curso.launch_year }}   </td>
+        <td (click)="onSelected(Curso)">{{ Curso.duration_hours }}   </td>
+      </tr>
+      <tbody>
+        <tr *ngFor="let Curso of Cursos; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td (click)="onSelected(Curso)">{{ Curso.title }}   </td>
+          <td (click)="onSelected(Curso)">{{ Curso.platform }}   </td>
+          <td (click)="onSelected(Curso)">{{ Curso.launch_year }}   </td>
+          <td (click)="onSelected(Curso)">{{ Curso.duration_hours }}   </td>
+        </tr>
+  </tbody>
+</table>
+
+<div id="certified">
+  Los cursos que ofrecen <span class="highlight">CERTIFICADO</span> son el <span class="highlight">1, 3, 5 y 6</span> .
+</div>
+
+<hr />
+
+
+

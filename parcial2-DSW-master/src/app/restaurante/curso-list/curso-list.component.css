@@ -29,7 +29,7 @@
 }
 
 /* Estilo para el mensaje de mejor puntuación */
-#bestRating {
+#certified {
   margin-top: 20px;
   padding: 15px;
   background-color: #4CAF50;
@@ -39,19 +39,19 @@
   border-radius: 5px; /* Esquinas redondeadas */
 }
 
-#bestRating .highlight {
+#certified .highlight {
   font-weight: bold;
   color: #1a237e;
 }
 
 /* Transiciones suaves para mejorar la experiencia del usuario */
 .table,
-#bestRating {
+#certified {
   transition: background-color 0.3s ease;
 }
 
 .table th,
 .table td,
-#bestRating {
+#certified {
   transition: box-shadow 0.3s ease;
 }

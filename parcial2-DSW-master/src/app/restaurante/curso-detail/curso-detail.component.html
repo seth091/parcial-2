@@ -1,0 +1,17 @@
+  <h2>Cursos En línea</h2>
+  <link rel = "stylesheet" href = "Curso-detail.component.css">
+  <div class="card-container">
+    <div class="card" *ngFor="let Curso of Cursos; let i = index" (click)="onSelected(Curso)">
+      <div class="card-body">
+        <h5 class="card-title">{{ i + 1 }}</h5>
+        <p class="card-text"><strong></strong> {{ Curso.image }}</p>
+        <p class="card-text"><strong>Titulo:</strong> {{ Curso.title }}</p>
+        <p class="card-text"><strong>Descripcion:</strong> {{ Curso.description }}</p>
+        <p class="card-text"><strong>Certifica:</strong> {{ Curso.offers_certificate }}</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <hr />
+  
