@@ -1,0 +1,33 @@
+
+<h2>Restaurantes Internacionales</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Pais</th>
+      <th>Tipo</th>
+      <th>Fundacion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let restaurante of restaurantes; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td (click)="onSelected(restaurante)">{{ restaurante.name }}   </td>
+      <td (click)="onSelected(restaurante)">{{ restaurante.country }}   </td>
+      <td (click)="onSelected(restaurante)">{{ restaurante.cuisine }}   </td>
+      <td (click)="onSelected(restaurante)">{{ restaurante.opening_year }}   </td>
+      <td (click)="onSelected(restaurante)">{{ restaurante.name }}   </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<div id="bestRating">
+  El restaurante con mejor puntuación es <span class="highlight">El Celler de Can Roca</span> y tiene <span class="highlight">5.0</span> puntos.
+</div>
+
+<hr />
+
+
+
