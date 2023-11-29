@@ -1,28 +1,57 @@
+/* Estilo para la tabla de restaurantes internacionales */
 .table {
-  width: 50%;
+  width: 80%;
   border-collapse: collapse;
-  padding: 10px;
-  margin: 100px;
-  cursor: pointer;
+  margin: 20px auto; /* Centrar la tabla */
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .table th,
 .table td {
-  padding: 8px;
+  padding: 12px;
   text-align: left;
-  border-bottom: 4px solid #ddd;
-  border-top: 4px solid #ddd;
+  border-bottom: 2px solid #4CAF50;
 }
 
 .table th {
-  background-color: #f2f2f2;
-  font-weight: bold;
+  background-color: #45a049;
+  color: white;
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7; /* Un tono más claro para filas pares */
 }
 
 .table tbody tr:hover {
-  background-color: #e6e6e6;
+  background-color: #e0f7fa;
+  cursor: pointer;
+}
+
+/* Estilo para el mensaje de mejor puntuación */
+#bestRating {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+
+#bestRating .highlight {
+  font-weight: bold;
+  color: #1a237e;
+}
+
+/* Transiciones suaves para mejorar la experiencia del usuario */
+.table,
+#bestRating {
+  transition: background-color 0.3s ease;
+}
+
+.table th,
+.table td,
+#bestRating {
+  transition: box-shadow 0.3s ease;
 }

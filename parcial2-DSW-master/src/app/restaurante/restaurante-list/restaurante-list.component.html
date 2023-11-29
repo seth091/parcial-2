@@ -1,7 +1,12 @@
+<div *ngIf="selected">
+  <app-restaurante-detail [restauranteDetail]="selectedRestaurante"></app-restaurante-detail>
+</div>
+<hr />
 
 <h2>Restaurantes Internacionales</h2>
 <table class="table">
   <thead>
+    <link rel = "stylesheet" href = "restaurante-list.component.css">
     <tr>
       <th>#</th>
       <th>Nombre</th>
@@ -17,9 +22,23 @@
       <td (click)="onSelected(restaurante)">{{ restaurante.country }}   </td>
       <td (click)="onSelected(restaurante)">{{ restaurante.cuisine }}   </td>
       <td (click)="onSelected(restaurante)">{{ restaurante.opening_year }}   </td>
-      <td (click)="onSelected(restaurante)">{{ restaurante.name }}   </td>
-
     </tr>
+    <tbody>
+      <tr *ngFor="let restaurante of restaurantes; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td (click)="onSelected(restaurante)">{{ restaurante.name }}   </td>
+        <td (click)="onSelected(restaurante)">{{ restaurante.country }}   </td>
+        <td (click)="onSelected(restaurante)">{{ restaurante.cuisine }}   </td>
+        <td (click)="onSelected(restaurante)">{{ restaurante.opening_year }}   </td>
+      </tr>
+      <tbody>
+        <tr *ngFor="let restaurante of restaurantes; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td (click)="onSelected(restaurante)">{{ restaurante.name }}   </td>
+          <td (click)="onSelected(restaurante)">{{ restaurante.country }}   </td>
+          <td (click)="onSelected(restaurante)">{{ restaurante.cuisine }}   </td>
+          <td (click)="onSelected(restaurante)">{{ restaurante.opening_year }}   </td>
+        </tr>
   </tbody>
 </table>
 
